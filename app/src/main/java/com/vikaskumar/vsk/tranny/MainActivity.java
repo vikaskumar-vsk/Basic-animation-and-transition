@@ -6,6 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.transition.TransitionManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void moveButton(){
         View buckysButton = findViewById(R.id.buckysButton);
+
+        TransitionManager.beginDelayedTransition(buckysLayout);
 
         //change the postition of the button
         RelativeLayout.LayoutParams postionRules = new RelativeLayout.LayoutParams(
